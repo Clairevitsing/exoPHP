@@ -1,5 +1,6 @@
 <?php
 include 'function.php';
+require_once __DIR__ . 'pdo.php';
 ?>
 
 
@@ -61,7 +62,7 @@ include 'function.php';
 <h2>Exercice 5 - afficher un message</h2>
 <?php
 
-$message = "Bonjour, c’est moi. <br> T’es le bien venu sur mon site.";
+$message = "Bonjour, c’est moi. <br> T’es le bienvenu sur mon site.";
 
 echo "<p>$message</p>";
 ?>
@@ -109,8 +110,8 @@ echo "<p>$message</p>";
 
 class Livre
 {
-    public int $id;
-    public string $titre;
+    private int $id;
+    private string $titre;
 
     public function __construct(int $id, string $titre)
     {
