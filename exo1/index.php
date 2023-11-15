@@ -110,38 +110,38 @@ echo "<p>$message</p>";
 class Livre
 {
     public int $id;
-    public string $title;
+    public string $titre;
 
-    public function __construct(int $id, string $title)
+    public function __construct(int $id, string $titre)
     {
       $this->id = $id;
-      $this->title = $title;
+      $this->titre = $titre;
     }
 
-    public function getTitle():string { 
-        return $this->title;
+    public function getTitre():string { 
+        return $this->titre;
     }
 
-     public function setTitle(string $title): void{
-        $this-> title = $title;
+     public function setTitre(string $titre): void{
+        $this-> titre = $titre;
     }
 
 
 }
 
 $livre1 = new Livre(0,"Le Rouge et le Noir" );
-echo "Title du livre : " . $livre1->getTitle() . "\n";?>
+echo "Titre du livre : " . $livre1->getTitre() . "\n";?>
 <br>
 <?php
-function nouveauLivre(int $id, string $title): livre
+function nouveauLivre(int $id, string $titre): livre
 {
-  $livre = new Livre($id, $title);
+  $livre = new Livre($id, $titre);
 
   return $livre;
 }
 
 $livre2 = nouveauLivre(1,"Les Misérables");
-echo "Title du livre : " . $livre2->getTitle() . "\n";
+echo "Titre du livre : " . $livre2->getTitre() . "\n";
 
 
 

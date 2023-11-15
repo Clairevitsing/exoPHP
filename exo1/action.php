@@ -1,2 +1,8 @@
-Bonjour, vous êtes professeur <?php echo htmlspecialchars($_POST['nom']); ?>.
-Vous donnez le cours  <?php echo $_POST['cours']; ?>.
+<?php
+if (!empty($_POST['nom']) && !empty($_POST['cours'])) {
+    echo "Bonjour, vous êtes professeur " . $_POST['nom'] . ".\n";
+    echo "Vous donnez le cours " . $_POST['cours'] . ".";
+} else {
+    echo "Il faut remplir les champs.";
+}
+?>
